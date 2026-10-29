@@ -2,9 +2,10 @@
 """Build the MAHUS multi-page site (white ink on black) into website/.
 
 Run:  python3 _build.py
-Emits both versions side by side: black/index.html … black/contact.html
-and light/index.html … light/contact.html.  Shared assets (styles.css,
-site.js, favicon.svg, img/, data/) live in website/ itself.
+Emits the light (white) version at website/ root — website/index.html …
+website/contact.html — and the black version in website/black/.
+Shared assets (styles.css, site.js, favicon.svg, img/, data/) live in
+website/ itself.
 34 designs + 195 lines are pulled from website/data/*.json.
 """
 import json, os, html, io
@@ -30,15 +31,17 @@ HTML_ATTR = ""
 
 
 def set_theme(theme):
-    global HTML_ATTR, TOGGLE_PREFIX, TOGGLE_TXT, TOGGLE_ARIA
+    global HTML_ATTR, TOGGLE_PREFIX, TOGGLE_TXT, TOGGLE_ARIA, P
     if theme == "light":
         HTML_ATTR = ' data-theme="light"'
+        P = ""
         TOGGLE_PREFIX, TOGGLE_TXT, TOGGLE_ARIA = (
-            "../black/", "BLACK", "Switch to the black version")
+            "black/", "BLACK", "Switch to the black version")
     else:
         HTML_ATTR = ""
+        P = "../"
         TOGGLE_PREFIX, TOGGLE_TXT, TOGGLE_ARIA = (
-            "../light/", "WHITE", "Switch to the white version")
+            "../", "WHITE", "Switch to the white version")
 
 
 NAV = [
@@ -924,9 +927,11 @@ PAGES = {
 }
 
 if __name__ == "__main__":
+    # light  -> website/ root  (https://mahus.in/)
+    # dark   -> website/black/ (https://mahus.in/black/)
     for theme in ("dark", "light"):
         set_theme(theme)
-        outdir = D("black" if theme == "dark" else "light")
+        outdir = HERE if theme == "light" else D("black")
         if not os.path.isdir(outdir):
             os.makedirs(outdir)
         for name, fn in PAGES.items():

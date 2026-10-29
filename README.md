@@ -9,10 +9,11 @@ and **Hoodie Specifications.pdf**.
 display face. No blue or yellow — emphasis is done by inversion (white block,
 black text). WhatsApp green appears only on WA buttons.
 
-**Two versions, one folder:** every page is generated twice — into `black/`
-(white ink on black) and `light/` (`data-theme="light"`, black ink on white).
-The HUD toggle (`◐ WHITE` / `◐ BLACK`) switches between the same page in the
-other version; both are kept in step by the dual build below.
+**Two versions, one folder:** every page is generated twice — the light
+version (`data-theme="light"`, black ink on white) at the repo **root**
+(what `https://mahus.in/` serves) and the black version (white ink on black)
+in `black/`. The HUD toggle (`◐ WHITE` / `◐ BLACK`) switches between the same
+page in the other version; both are kept in step by the dual build below.
 
 ## Pages
 
@@ -32,23 +33,23 @@ other version; both are kept in step by the dual build below.
 
 ```
 website/
-├── black/                      the 9 pages, black version (generated)
-├── light/                      the 9 pages, white version (generated)
-├── styles.css                  dark tokens in :root + [data-theme="light"] overrides
-├── site.js                     line filter, strip arrows, order calculators, WhatsApp composer
+├── index.html                   the 9 pages, white version (generated, repo root)
+├── black/                       the 9 pages, black version (generated)
+├── styles.css                   dark tokens in :root + [data-theme="light"] overrides
+├── site.js                      line filter, strip arrows, order calculators, WhatsApp composer
 ├── favicon.svg
-├── _build.py                   regenerates both versions (shared header/footer/nav)
+├── _build.py                    regenerates both versions (shared header/footer/nav)
 ├── data/
-│   ├── designs.json            34 designs: file + caption
-│   └── lines195.json           195 lines, extracted verbatim from Suggestions_Ideas.docx
+│   ├── designs.json             34 designs: file + caption
+│   └── lines195.json            195 lines, extracted verbatim from Suggestions_Ideas.docx
 └── img/
-    ├── designs/d01–d34.png     the client's 34 PNGs, renamed 01–34
-    ├── hero-spec.png           "00_ Your Line Your Image…" (home, left of specs)
-    ├── hoodie.svg              hoodie technical drawing (hoodies page)
-    ├── hoodie-chest.jpg        production photo — chest print, front
-    ├── hoodie-back.jpg         production photo — full-colour back print
-    ├── size-chart.png          "How to measure" graphic (from Size Chart.pdf)
-    ├── upi-qr.svg              UPI QR — placeholder pattern
+    ├── designs/d01–d34.png      the client's 34 PNGs, renamed 01–34
+    ├── hero-spec.png            "00_ Your Line Your Image…" (home, left of specs)
+    ├── hoodie.svg               hoodie technical drawing (hoodies page)
+    ├── hoodie-chest.jpg         production photo — chest print, front
+    ├── hoodie-back.jpg          production photo — full-colour back print
+    ├── size-chart.png           "How to measure" graphic (from Size Chart.pdf)
+    ├── upi-qr.svg               UPI QR — placeholder pattern
     └── tee.svg
 ```
 
@@ -58,7 +59,7 @@ Content is data-driven, so a changed list does not mean hand-editing HTML:
 
 ```bash
 cd website
-python3 _build.py      # rebuilds all 9 pages in BOTH versions (black/ + light/)
+python3 _build.py      # rebuilds all 9 pages: white at root, black in black/
 ```
 
 To change the design catalogue, edit `data/designs.json` (and drop any new PNG
@@ -68,8 +69,8 @@ into `img/designs/`). To change the line library, edit `data/lines195.json`.
 
 ```bash
 cd website && python3 -m http.server 8899
-# http://localhost:8899/black/index.html    black version (default)
-# http://localhost:8899/light/index.html    white version
+# http://localhost:8899/                  white version (root, default)
+# http://localhost:8899/black/index.html  black version
 ```
 
 Any static host works — there is no build step at serve time.
@@ -77,7 +78,7 @@ Any static host works — there is no build step at serve time.
 ## Behaviour
 
 * **Theme toggle** (HUD, every page) — jumps to the same page in the other
-  version: `black/index.html` ⇄ `light/index.html`, same anchor preserved.
+  version: `index.html` ⇄ `black/index.html`, same anchor preserved.
 * **Line filter** (home) — filters the 195 lines as you type, with a live count.
 * **Design strip** — horizontal scroll with snap; ← → buttons page it.
 * **Order calculators** (blank tee + pricing) — unit × qty, live invoice, and a
