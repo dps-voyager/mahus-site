@@ -23,7 +23,7 @@ page in the other version; both are kept in step by the dual build below.
 | `size-chart.html` | Tab 2 | XS to 7XL — chest 36→56 inches, length 26→36, plus the supplied "How to measure" image |
 | `blank-tee.html` | Tab 3 | Blank tee ₹600 — chest-size checkboxes (40/42/44/46 only), quantity, live invoice, order via WhatsApp |
 | `pricing.html` | Tab 4 | Blank ₹600 / front ₹1,000 / front + back ₹1,100, with a configurator: print side, your line, chest sizes, quantity. Bulk orders priced on request |
-| `hoodies.html` | — | 420 GSM hoodie — specs beside the hoodie drawing (incl. ~800 g weight, XS–7XL), pricing ₹1,800 blank / ₹2,150 with a print / ₹2,500 front + back, chest & back print photos, comparison table (MAHUS vs Brand X vs Brand Y), good-to-know notes |
+| `hoodies.html` | — | 420 GSM hoodie — specs beside the hoodie drawing (incl. ~800 g weight, XS–7XL), pricing ₹2,500 blank / ₹2,850 with a print / ₹3,000 front + back, chest & back print photos, comparison table (MAHUS vs Brand X vs Brand Y), good-to-know notes |
 | `order.html` | Tab 5 | WhatsApp + phone, UPI QR with VPA and amount, 4-step flow, buyer-details form that composes the WhatsApp message |
 | `polo.html` | Tab 6 | Black polo — also customised; sizing/pricing flagged as not yet final |
 | `about.html` | — | Founder block (Akaljot Singh, IIT Delhi '98) from `notes1.rtf`; long-form story still to come |

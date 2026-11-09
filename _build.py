@@ -289,7 +289,7 @@ def page_index():
     <div class="grid2">
       <div class="panel panel-hi">
         <p class="lab lab-w">420 GSM pullover hoodie</p>
-        <p class="price"><small>₹</small>1,800</p>
+        <p class="price"><small>₹</small>2,500</p>
         <p class="fine bd">100%% cotton heavy fleece, relaxed oversized with dropped shoulders, full sleeve, about 800 g. ₹350 extra for a print front or back; embroidery priced to the design.</p>
         <p style="margin:18px 0 0"><a class="btn btn-hi btn-block" href="hoodies.html">SEE THE HOODIES</a></p>
       </div>
@@ -333,7 +333,7 @@ def page_index():
 """ % (P, spec_list(), designs_strip(), lines_list())
     return shell(
         "MAHUS — Customised Oversized Tees",
-        "MAHUS prints your line, your image, your imagination on a 240 GSM black oversized tee. 34 designs, 195 lines, plain black from ₹600 — and 420 GSM hoodies from ₹1,800.",
+        "MAHUS prints your line, your image, your imagination on a 240 GSM black oversized tee. 34 designs, 195 lines, plain black from ₹600 — and 420 GSM hoodies from ₹2,500.",
         "index.html", body,
     )
 
@@ -801,9 +801,9 @@ def page_hoodies():
   <section class="hero">
     <p class="blink">&#9679; New — 420 GSM heavy fleece hoodies</p>
     <h1>Heavyweight.<br>420 gsm.<br><span>Black.</span></h1>
-    <p class="lede"><b>The hoodie.</b> 100%% cotton heavy fleece at 420 GSM — a proper winter layer, not a light one. Unisex, relaxed oversized with dropped shoulders, full sleeve, about 800 g on the scale. Blank at ₹1,800; add a print for ₹350, or embroider to the design.</p>
+    <p class="lede"><b>The hoodie.</b> 100%% cotton heavy fleece at 420 GSM — a proper winter layer, not a light one. Unisex, relaxed oversized with dropped shoulders, full sleeve, about 800 g on the scale. Blank at ₹2,500; add a print for ₹350, or embroider to the design.</p>
     <div class="cta">
-      <a class="btn btn-hi" href="#pricing">HOODIE PRICING — ₹1,800</a>
+      <a class="btn btn-hi" href="#pricing">HOODIE PRICING — ₹2,500</a>
       <a class="btn btn-wa" href="%s">ASK ON WHATSAPP</a>
     </div>
   </section>
@@ -833,23 +833,23 @@ def page_hoodies():
         <p class="ey">02 / <b>PRICING</b></p>
         <h2>What it costs</h2>
       </div>
-      <p class="note">Per piece. Blank is blank — a print adds ₹350 to it, on the front, the back, or both.</p>
+      <p class="note">Per piece. Blank is blank — a print adds ₹350 to it, on the front or the back; both sides add ₹500.</p>
     </div>
     <div class="grid3">
       <div class="panel">
         <p class="lab">Blank hoodie</p>
-        <p class="price"><small>₹</small>1,800</p>
+        <p class="price"><small>₹</small>2,500</p>
         <p class="fine">Plain black 420 GSM pullover, nothing on it.</p>
       </div>
       <div class="panel panel-hi">
         <p class="lab lab-w">With a print</p>
-        <p class="price"><small>₹</small>2,150</p>
+        <p class="price"><small>₹</small>2,850</p>
         <p class="fine">Blank plus one DTF print, front or back — ₹350 more. Less per piece on multiple hoodies.</p>
       </div>
       <div class="panel">
         <p class="lab">Front + back</p>
-        <p class="price"><small>₹</small>2,500</p>
-        <p class="fine">A print on each side — ₹700 on top of the blank.</p>
+        <p class="price"><small>₹</small>3,000</p>
+        <p class="fine">A print on each side — ₹500 on top of the blank.</p>
       </div>
     </div>
     <div class="grid2" style="margin-top:26px">
@@ -881,7 +881,7 @@ def page_hoodies():
         <thead><tr><th>Point</th><th>MAHUS</th><th>Brand X</th><th>Brand Y</th></tr></thead>
         <tbody>
           <tr><th>Fabric</th><td>100%% cotton heavy fleece · 420 GSM</td><td>&ldquo;Rich Cotton&rdquo; — no GSM given</td><td>&ldquo;Poly Cotton&rdquo; blend — no GSM given</td></tr>
-          <tr><th>Price</th><td>₹1,800</td><td>₹2,325</td><td>₹1,725</td></tr>
+          <tr><th>Price</th><td>₹2,500</td><td>₹2,325</td><td>₹1,725</td></tr>
           <tr><th>Minimum order</th><td>1 — when combined orders cross 20</td><td>5</td><td>5</td></tr>
           <tr><th>Stock</th><td>Live now</td><td>200 available — last updated 17.08.2026</td><td>Out of stock</td></tr>
           <tr><th>Colour</th><td>Black</td><td>Charcoal grey</td><td>Black</td></tr>
@@ -900,7 +900,7 @@ def page_hoodies():
     </div>
     <div class="grid3">
       <div class="panel"><p class="lab">Pullover or zip</p><p class="fine" style="font-size:13px;line-height:1.8">Both possible. A zip runs about ₹60–70 more and is cut once we know how many zip orders there are — say if you want one.</p></div>
-      <div class="panel panel-hi"><p class="lab lab-w">Embroidery or DTF</p><p class="fine" style="font-size:13px;line-height:1.8">Both can be provided. Prints are ₹350 a side; embroidery is quoted per design, stitched instead of printed.</p></div>
+      <div class="panel panel-hi"><p class="lab lab-w">Embroidery or DTF</p><p class="fine" style="font-size:13px;line-height:1.8">Both can be provided. A print is ₹350 — front or back; both sides ₹500. Embroidery is quoted per design, stitched instead of printed.</p></div>
       <div class="panel"><p class="lab">Dispatch</p><p class="fine" style="font-size:13px;line-height:1.8">420 GSM: about 20 days from order. Need it sooner? 400 GSM ready stock in M, L and XL — 7 to 10 days.</p></div>
     </div>
     <p class="fine">Something lighter? 300 GSM is supplied for milder winters — indoors around 20°C. Chest sizes XS to 7XL, 36 to 56 inches; send yours in inches, not letters.</p>
@@ -909,7 +909,7 @@ def page_hoodies():
 """ % (WALINK, P, hoodie_spec_list(), P, P, WALINK, WAFLAT)
     return shell(
         "Hoodies — MAHUS",
-        "MAHUS hoodies: 420 GSM 100% cotton heavy fleece pullover, black, unisex, ₹1,800 blank, +₹350 per print. Printed or embroidered to order, MOQ from 1.",
+        "MAHUS hoodies: 420 GSM 100% cotton heavy fleece pullover, black, unisex, ₹2,500 blank, +₹350 per print. Printed or embroidered to order, MOQ from 1.",
         "hoodies.html", body,
     )
 
